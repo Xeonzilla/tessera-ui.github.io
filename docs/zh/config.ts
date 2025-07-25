@@ -9,13 +9,6 @@ export default defineConfig({
     nav: [
       { text: "主页", link: "/zh/" },
       { text: "手册", link: "/zh/quick-start/what-is-tessera" },
-      {
-        text: "简体中文",
-        items: [
-          { text: "English", link: "/" },
-          { text: "简体中文", link: "/zh/" },
-        ],
-      },
     ],
 
     sidebar: [
