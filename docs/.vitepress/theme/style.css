@@ -1,0 +1,48 @@
+/* Custom Hero Styles */
+.VPHero .name {
+  margin-bottom: 24px !important; /* Increase space below the main title */
+}
+
+.VPHero .text {
+  line-height: 1.7 !important; /* Adjust line height for better readability */
+}
+
+/* Elegant Rotating Words Animation using CSS inline-grid */
+.rotating-words {
+  display: inline-grid; /* Use inline-grid to flow with text */
+  place-items: center start;
+  vertical-align: baseline; /* Align with surrounding text */
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.rotating-words span {
+  /* All spans occupy the same grid cell */
+  grid-column: 1;
+  grid-row: 1;
+  
+  opacity: 0;
+  white-space: nowrap;
+  animation: rotate-words 10s linear infinite; /* 5 words * 2s = 10s */
+}
+
+.rotating-words span:nth-child(2) {
+  animation-delay: 2s;
+}
+.rotating-words span:nth-child(3) {
+  animation-delay: 4s;
+}
+.rotating-words span:nth-child(4) {
+  animation-delay: 6s;
+}
+.rotating-words span:nth-child(5) {
+  animation-delay: 8s;
+}
+
+@keyframes rotate-words {
+  0% { opacity: 0; transform: translateY(-10px); }
+  2% { opacity: 1; transform: translateY(0); }  /* 2% of 10s = 0.2s for fade in */
+  18% { opacity: 1; transform: translateY(0); } /* 18% of 10s = 1.8s for display */
+  20% { opacity: 0; transform: translateY(10px); } /* 2% of 10s = 0.2s for fade out */
+  100% { opacity: 0; }
+}
