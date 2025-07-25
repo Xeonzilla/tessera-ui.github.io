@@ -14,20 +14,6 @@ export default defineConfig({
       label: '简体中文',
       lang: 'zh-CN',
       link: '/zh/',
-      themeConfig: {
-        nav: [
-          { text: '首页', link: '/zh/' },
-          { text: '指南', link: '/zh/quick-start/what-is-tessera' }
-        ],
-        sidebar: [
-          {
-            text: '快速开始',
-            items: [
-              { text: '什么是Tessera？', link: '/zh/quick-start/what-is-tessera' },
-            ]
-          }
-        ],
-      }
     }
   },
 
