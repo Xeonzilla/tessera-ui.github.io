@@ -5,6 +5,24 @@ export default defineConfig({
   base: '/tessera-official-website/',
   title: "Tessera",
   description: "A declarative, immediate-mode UI framework for Rust",
+  head: [
+    [
+      'script',
+      {},
+      `
+      (function() {
+        const { pathname, search, hash } = window.location;
+        const base = '/tessera-official-website/';
+        if (pathname === base || pathname === (base + 'index.html')) {
+          const userLang = navigator.language;
+          if (userLang.toLowerCase().startsWith('zh')) {
+            window.location.replace(base + 'zh/' + search + hash);
+          }
+        }
+      })();
+      `
+    ]
+  ],
   
   locales: {
     root: {
