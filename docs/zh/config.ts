@@ -8,16 +8,24 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "主页", link: "/zh/" },
-      { text: "手册", link: "/zh/quick-start/what-is-tessera" },
+      { text: "手册", link: "/zh/guide/getting-started" },
+      { text: "关于", link: "/zh/about/about" },
     ],
 
     sidebar: [
       {
-        text: "快速开始",
+        text: "手册",
         items: [
-          { text: "何为 Tessera?", link: "/zh/quick-start/what-is-tessera" },
+          { text: "快速开始", link: "/zh/guide/getting-started" },
+          { text: "何为 Tessera?", link: "/zh/guide/what-is-tessera" },
         ],
       },
     ],
+
+    socialLinks: [
+      { icon: "github", link: "https://github.com/tessera-ui/tessera" },
+    ],
+
+    i18nRouting: true,
   },
 });

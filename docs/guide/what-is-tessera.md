@@ -12,16 +12,19 @@ Tessera’s architecture is built around several core concepts:
 - Explicit State Management: Components are stateless with explicit state passing
 
 ## Getting Started by Developer Level
+
 🟢 **Beginner Users** - Building Basic Applications
 
 If you’re new to Tessera and want to build applications using existing components:
 
 Start with these modules:
+
 - `renderer` - Core renderer and application lifecycle management
 - `Dp`, `Px` - Basic measurement units for layouts
 - `Color` - Color system for styling components
 
 Key concepts to understand:
+
 - How to set up a `Renderer` and run your application
 - Using `tessera_basic_components` for common UI elements
 - Basic layout with `row`, `column`, and `surface` components
@@ -50,6 +53,7 @@ fn my_app() {
 For developers who want to create custom components and handle complex layouts:
 
 Essential functions and types:
+
 - `measure_node` - Measure child component sizes with constraints
 - `place_node` - Position child components in the layout
 - `StateHandlerFn` - Handle user interactions and state changes
@@ -57,6 +61,7 @@ Essential functions and types:
 - `ComputedData` - Return computed size and layout information
 
 Key concepts:
+
 - Understanding the measurement and placement phase
 - Creating custom layout algorithms
 - Managing component state through explicit state handlers
@@ -89,6 +94,7 @@ fn custom_layout() {
 For developers building custom visual effects and rendering pipelines:
 
 Advanced rendering modules:
+
 - `renderer::drawer` - Custom drawable pipelines and draw commands
 - `renderer::compute` - GPU compute pipelines for advanced effects
 - `DrawCommand`, `ComputeCommand` - Low-level rendering commands
@@ -96,6 +102,7 @@ Advanced rendering modules:
 - `PipelineRegistry`, `ComputePipelineRegistry` - Pipeline management
 
 Key concepts:
+
 - Creating custom WGPU shaders and pipelines
 - Managing GPU resources and compute operations
 - Understanding the rendering command system
@@ -117,7 +124,9 @@ impl DrawablePipeline for MyCustomPipeline {
 ```
 
 ## Core Modules
+
 Essential Types and Functions
+
 - `Renderer` - Main application renderer and lifecycle manager
 - `measure_node`, `place_node` - Core layout functions
 - `Constraint`, `DimensionValue` - Layout constraint system
@@ -125,17 +134,20 @@ Essential Types and Functions
 - `Color` - Color representation and utilities
 
 Component System
+
 - `ComponentTree` - Component tree management
 - `ComponentNode` - Individual component node representation
 - `ComputedData` - Layout computation results
 - `StateHandlerFn` - State management and event handling
 
 Event Handling
+
 - `CursorEvent` - Mouse and touch input events
 - `Focus` - Focus management system
 - `PressKeyEventType` - Keyboard input handling
 
 Rendering System
+
 - `renderer::drawer` - Drawing pipeline system
 - `renderer::compute` - Compute pipeline system
 - `DrawCommand`, `ComputeCommand` - Rendering commands
@@ -143,6 +155,7 @@ Rendering System
 ## Examples
 
 Check out the example crate in the workspace for comprehensive examples demonstrating:
+
 - Basic component usage
 - Custom layouts and interactions
 - Advanced shader effects
@@ -151,6 +164,7 @@ Check out the example crate in the workspace for comprehensive examples demonstr
 ## Performance Considerations
 
 Tessera is designed for high performance through:
+
 - Parallel measurement computation using Rayon
 - Efficient GPU utilization through custom shaders
 - Minimal allocations in hot paths

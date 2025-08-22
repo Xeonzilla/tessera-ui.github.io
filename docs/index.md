@@ -39,5 +39,5 @@ features:
     Licensed under the MIT or Apache-2.0 at your option.
 </div>
 <div style="display: flex; justify-content: center; align-items: center;">
-    Copyright (©) Tessera
+    Copyright (©) Tessera UI Framework Developers
 </div>
