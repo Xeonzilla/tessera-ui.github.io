@@ -7,6 +7,10 @@ export default defineConfig({
   description: "A declarative, immediate-mode UI framework for Rust",
   head: [
     [
+      'link',
+      { rel: 'icon', href: '/tessera-official-website/favicon.svg' }
+    ],
+    [
       "script",
       {},
       `
@@ -37,6 +41,8 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: "/icon-text-only.svg",
+    siteTitle: false,
     nav: [
       { text: "Home", link: "/" },
       { text: "Guide", link: "/guide/getting-started" },
