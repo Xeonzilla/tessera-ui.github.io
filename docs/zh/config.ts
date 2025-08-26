@@ -17,7 +17,7 @@ export default defineConfig({
       {
         text: "手册",
         items: [
-          { text: "何为 Tessera?", link: "/zh/guide/what-is-tessera" },
+          { text: "什么是 Tessera?", link: "/zh/guide/what-is-tessera" },
           { text: "快速开始", link: "/zh/guide/getting-started" },
         ],
       },
