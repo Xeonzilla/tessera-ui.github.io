@@ -6,10 +6,7 @@ export default defineConfig({
   title: "Tessera",
   description: "A declarative, immediate-mode UI framework for Rust",
   head: [
-    [
-      'link',
-      { rel: 'icon', href: '/tessera-official-website/favicon.svg' }
-    ],
+    ["link", { rel: "icon", href: "/tessera-official-website/favicon.svg" }],
     [
       "script",
       {},
@@ -53,8 +50,8 @@ export default defineConfig({
       {
         text: "Docs",
         items: [
-          { text: "Getting Started", link: "/guide/getting-started" },
           { text: "What is Tessera?", link: "/guide/what-is-tessera" },
+          { text: "Getting Started", link: "/guide/getting-started" },
         ],
       },
     ],

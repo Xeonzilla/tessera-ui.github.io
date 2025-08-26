@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { getSidebar } from "vitepress-plugin-auto-sidebar";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -16,8 +17,8 @@ export default defineConfig({
       {
         text: "手册",
         items: [
-          { text: "快速开始", link: "/zh/guide/getting-started" },
           { text: "何为 Tessera?", link: "/zh/guide/what-is-tessera" },
+          { text: "快速开始", link: "/zh/guide/getting-started" },
         ],
       },
     ],
