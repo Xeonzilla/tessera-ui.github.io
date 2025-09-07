@@ -28,13 +28,15 @@ fn app() {
             .unwrap(),
         None,
         || {
-            boxed_ui!(
+            boxed!(
                 BoxedArgs {
                     width: DimensionValue::FILLED,
                     height: DimensionValue::FILLED,
                     alignment: Alignment::Center,
                 },
-                || text("Hello, Tessera!")
+                |scope| {
+                    scope.child(|| text("Hello, Tessera!"));
+                }
             )
         },
     );
@@ -79,20 +81,23 @@ fn app(ripple_state: Arc<RippleState>) {
             .unwrap(),
         None,
         || {
-            boxed_ui!(
+            boxed(
                 BoxedArgs {
                     width: DimensionValue::FILLED,
                     height: DimensionValue::FILLED,
                     alignment: Alignment::Center,
                 },
-                || button(
-                    ButtonArgsBuilder::default()
-                        .on_click(Arc::new(|| println!("HI!")))
-                        .build()
-                        .unwrap(),
-                    ripple_state,
-                    || text("Click me!"),
-                )
+                |scope| {
+                    scope.child(|| button(
+                            ButtonArgsBuilder::default()
+                                .on_click(Arc::new(|| println!("HI!")))
+                                .build()
+                                .unwrap(),
+                            ripple_state,
+                            || text("Click me!"),
+                        )
+                    )
+                }
             )
         },
     );
