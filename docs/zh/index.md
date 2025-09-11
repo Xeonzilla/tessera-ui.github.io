@@ -33,11 +33,3 @@ features:
     title: 面向未来
     details: 以可扩展性与实验性为设计目标，Tessera 不只是另一个 UI 工具包 —— 它是面向下一代界面设计的试验场。
 ---
-
-<hr>
-<div style="display: flex; justify-content: center; align-items: center;">
-    可按 MIT 或 Apache-2.0 许可证选择许可。
-</div>
-<div style="display: flex; justify-content: center; align-items: center;">
-    版权所有 (©) Tessera UI Framework Developers
-</div>

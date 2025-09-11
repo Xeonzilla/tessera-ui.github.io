@@ -27,6 +27,11 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/tessera-ui/tessera" },
     ],
 
+    footer: {
+      message: "可按 MIT 或 Apache-2.0 许可证选择许可。",
+      copyright: "版权所有 © Tessera UI Framework Developers"
+    },
+
     i18nRouting: true,
   },
 });
