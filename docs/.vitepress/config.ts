@@ -2,18 +2,18 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  base: "/tessera-official-website/",
+  base: "/",
   title: "Tessera",
   description: "A declarative, immediate-mode UI framework for Rust",
   head: [
-    ["link", { rel: "icon", href: "/tessera-official-website/favicon.svg" }],
+    ["link", { rel: "icon", href: "/favicon.svg" }],
     [
       "script",
       {},
       `
       (function() {
         const { pathname, search, hash } = window.location;
-        const base = '/tessera-official-website/';
+        const base = '/';
         if (pathname === base || pathname === (base + 'index.html')) {
           const userLang = navigator.language;
           if (userLang.toLowerCase().startsWith('zh')) {
