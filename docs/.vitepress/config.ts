@@ -60,6 +60,11 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/tessera-ui/tessera" },
     ],
 
+    footer: {
+      message: "Licensed under the MIT or Apache-2.0 at your option.",
+      copyright: "Copyright © Tessera UI Framework Developers"
+    },
+
     i18nRouting: true,
   },
 });

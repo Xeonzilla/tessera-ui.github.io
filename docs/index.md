@@ -33,11 +33,3 @@ features:
     title: Future-Ready
     details: Designed with extensibility and experimentation in mind, Tessera is not just another UI toolkit — it’s a playground for next-gen interface design.
 ---
-
-<hr>
-<div style="display: flex; justify-content: center; align-items: center;">
-    Licensed under the MIT or Apache-2.0 at your option.
-</div>
-<div style="display: flex; justify-content: center; align-items: center;">
-    Copyright (©) Tessera UI Framework Developers
-</div>
