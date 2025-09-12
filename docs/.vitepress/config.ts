@@ -5,6 +5,11 @@ export default defineConfig({
   base: "/",
   title: "Tessera",
   description: "A declarative, immediate-mode UI framework for Rust",
+
+  sitemap: {
+    hostname: 'https://tessera-ui.github.io/',
+  },
+
   head: [
     ["link", { rel: "icon", href: "/favicon.svg" }],
     [
