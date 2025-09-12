@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  text: "A <span class='rotating-words'><span>declarative</span><span>immediate-mode</span><span>parallelized</span><span>cross-platform</span><span>shader-first</span></span><br>UI framework for Rust"
+  text: "<span class='rotating-words'><span>Declarative</span><span>Immediate-mode</span><span>Parallelized</span><span>Cross-platform</span><span>Shader-first</span></span><br>UI framework for Rust"
   tagline: "Build next-generation interfaces in Rust with GPU-first performance and a modern, ergonomic component model."
   actions:
     - theme: brand

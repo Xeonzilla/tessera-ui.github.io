@@ -43,8 +43,8 @@
 }
 
 @media (max-width: 960px) {
-  .rotating-words:where(:lang(zh)) {
-      place-items: center; /* Centered because of line break */
+  .rotating-words {
+    place-items: center; /* Centered because of line break */
   }
 }
 
