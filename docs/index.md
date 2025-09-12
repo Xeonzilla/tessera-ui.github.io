@@ -2,7 +2,6 @@
 layout: home
 
 hero:
-  name: "Tessera"
   text: "A <span class='rotating-words'><span>declarative</span><span>immediate-mode</span><span>parallelized</span><span>cross-platform</span><span>shader-first</span></span><br>UI framework for Rust"
   tagline: "Build next-generation interfaces in Rust with GPU-first performance and a modern, ergonomic component model."
   actions:
@@ -12,6 +11,9 @@ hero:
     - theme: alt
       text: Source Code
       link: https://github.com/tessera-ui/tessera
+  image:
+    src: /icon-T-3d.svg
+    alt: Tessera Logo
 
 features:
   - icon: 🧩

@@ -2,7 +2,6 @@
 layout: home
 
 hero:
-  name: "Tessera"
   text: "为 Rust 设计的<br><span class='rotating-words'><span>声明式</span><span>立即模式</span><span>并行化</span><span>跨平台</span><span>着色器优先</span></span><br>UI 框架"
   tagline: "在 Rust 中构建下一代界面 —— GPU 优先的性能与现代化、符合人体工程学的组件模型。"
   actions:
@@ -12,6 +11,9 @@ hero:
     - theme: alt
       text: 源代码
       link: https://github.com/tessera-ui/tessera
+  image:
+    src: /icon-T-3d.svg
+    alt: Tessera Logo
 
 features:
   - icon: 🧩
