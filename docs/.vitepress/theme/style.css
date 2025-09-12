@@ -42,6 +42,12 @@
   font-weight: 600;
 }
 
+@media (max-width: 960px) {
+  .rotating-words:where(:lang(zh)) {
+      place-items: center; /* Centered because of line break */
+  }
+}
+
 .rotating-words span {
   /* All spans occupy the same grid cell */
   grid-column: 1;
