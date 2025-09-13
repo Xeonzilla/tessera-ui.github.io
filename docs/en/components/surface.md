@@ -28,3 +28,7 @@ The state used for the click ripple animation. Passing `None` disables the rippl
 - `child: impl FnOnce()`
 
 The child component of `surface`, can be any `#[tessera]` function.
+
+## Preview
+
+![surface](/surface_example.png)

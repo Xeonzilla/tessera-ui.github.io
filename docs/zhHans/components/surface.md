@@ -28,3 +28,7 @@ pub fn surface(
 - `child: impl FnOnce()`
 
 此参数为`surface`组件的子组件，可以是任何`#[tessera]`函数。
+
+## 预览
+
+![surface](/surface_example.png)
