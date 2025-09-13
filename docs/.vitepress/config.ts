@@ -1,7 +1,9 @@
-import { defineConfig } from "vitepress";
+import { defineConfig, UserConfig } from "vitepress";
+import { withSidebar } from "vitepress-sidebar";
+import { withI18n } from "vitepress-i18n";
+import { VitePressI18nOptions } from "vitepress-i18n/types";
 
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+const vitePressConfig: UserConfig = {
   base: "/",
   title: "Tessera",
   description: "A declarative, immediate-mode UI framework for Rust",
@@ -22,7 +24,7 @@ export default defineConfig({
         if (pathname === base || pathname === (base + 'index.html')) {
           const userLang = navigator.language;
           if (userLang.toLowerCase().startsWith('zh')) {
-            window.location.replace(base + 'zh/' + search + hash);
+            window.location.replace(base + 'zhHans/' + search + hash);
           }
         }
       })();
@@ -30,36 +32,14 @@ export default defineConfig({
     ],
   ],
 
-  locales: {
-    root: {
-      label: "English",
-    },
-    zh: {
-      label: "简体中文",
-      lang: "zh-CN",
-      link: "/zh/",
-    },
+  rewrites: {
+    "en/:rest*": ":rest*",
   },
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/icon-text-only.svg",
     siteTitle: false,
-    nav: [
-      { text: "Home", link: "/" },
-      { text: "Guide", link: "/guide/getting-started" },
-      { text: "About", link: "/about/about" },
-    ],
-
-    sidebar: [
-      {
-        text: "Docs",
-        items: [
-          { text: "What is Tessera?", link: "/guide/what-is-tessera" },
-          { text: "Getting Started", link: "/guide/getting-started" },
-        ],
-      },
-    ],
 
     socialLinks: [
       { icon: "github", link: "https://github.com/tessera-ui/tessera" },
@@ -71,9 +51,55 @@ export default defineConfig({
 
     footer: {
       message: "Licensed under the MIT or Apache-2.0 at your option.",
-      copyright: "Copyright © Tessera UI Framework Developers"
+      copyright: "Copyright © Tessera UI Framework Developers",
     },
 
     i18nRouting: true,
   },
-});
+};
+
+const supportedLocales = ["en", "zhHans"];
+const rootLocale = "en";
+
+const commonVitePressSidebarConfig = {
+  useTitleFromFrontmatter: true,
+  useFolderTitleFromIndexFile: true,
+  sortMenusByFrontmatterOrder: true,
+};
+
+const vitePressSidebarConfigs = supportedLocales.map((lang) => ({
+  ...commonVitePressSidebarConfig,
+  ...(lang === rootLocale ? {} : { basePath: `/${lang}/` }),
+  documentRootPath: `docs/${lang}`,
+  resolvePath: lang === rootLocale ? "/" : `/${lang}/`,
+}));
+
+const vitePressI18nConfig: VitePressI18nOptions = {
+  // VitePress I18n config
+  locales: ["en", "zhHans"],
+  searchProvider: "local",
+  themeConfig: {
+    zhHans: {
+      nav: [
+        { text: "主页", link: "/zhHans" },
+        { text: "手册", link: "/zhHans/guide/getting-started" },
+        { text: "关于", link: "/zhHans/about" },
+      ],
+    },
+    en: {
+      nav: [
+        { text: "Home", link: "/" },
+        { text: "Guide", link: "/guide/getting-started" },
+        { text: "About", link: "/about" },
+      ],
+    },
+  },
+};
+
+// https://vitepress.dev/reference/site-config
+export default defineConfig(
+  withSidebar(
+    withI18n(vitePressConfig, vitePressI18nConfig),
+    vitePressSidebarConfigs
+  )
+);

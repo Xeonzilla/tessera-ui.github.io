@@ -1,3 +1,8 @@
+---
+title: Getting Started
+order: 1
+---
+
 # Getting Started
 
 This section guides you through creating a basic `tessera` application.
