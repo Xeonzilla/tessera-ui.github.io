@@ -19,7 +19,7 @@ cargo add tessera-ui-basic-components
 
 ## 注册到渲染器
 
-::: warning ⚠
+::: warning
 如果不注册对应管线到渲染器中，渲染器将直接崩溃。
 :::
 

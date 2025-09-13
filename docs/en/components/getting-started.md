@@ -19,7 +19,7 @@ cargo add tessera-ui-basic-components
 
 ## Registering with the renderer
 
-::: warning ⚠
+::: warning
 If you do not register the corresponding pipelines with the renderer, the renderer will crash.
 :::
 
