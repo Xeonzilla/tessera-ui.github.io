@@ -9,7 +9,7 @@ order: 3
 pub fn text(args: impl Into<TextArgs>)
 ```
 
-The Text component is used to display textual content.
+The `text` component is used to display textual content.
 
 ## Arguments
 

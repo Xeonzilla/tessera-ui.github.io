@@ -9,7 +9,7 @@ order: 3
 pub fn text(args: impl Into<TextArgs>)
 ```
 
-Text 组件用于显示文本内容。
+`text` 组件用于显示文本内容。
 
 ## 参数
 
