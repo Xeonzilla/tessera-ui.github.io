@@ -28,3 +28,7 @@ The state for the click ripple animation. You must provide a valid `RippleState`
 - `child: impl FnOnce()`
 
 The child component of the `button`, which can be any `#[tessera]` function.
+
+## Preview
+
+![button](/button_example.gif)

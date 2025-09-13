@@ -28,3 +28,7 @@ pub fn button(
 - `child: impl FnOnce()`
 
 此参数为`button`组件的子组件，可以是任何`#[tessera]`函数。
+
+## 预览
+
+![button](/button_example.gif)
