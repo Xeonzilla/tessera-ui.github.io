@@ -1,5 +1,5 @@
 ---
-title: surface component
+title: Surface component
 order: 1
 ---
 
