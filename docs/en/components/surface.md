@@ -31,4 +31,4 @@ The child component of `surface`, can be any `#[tessera]` function.
 
 ## Preview
 
-![surface](/surface_example.png)
+  ![surface](/surface_example.png)
