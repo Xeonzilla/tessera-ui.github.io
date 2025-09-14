@@ -3,7 +3,7 @@ title: What is Tessera?
 order: 0
 ---
 
-# Tessera UI Framework
+# What is Tessera
 
 Tessera is a declarative, immediate-mode UI framework for Rust that emphasizes performance, flexibility, and extensibility through a functional approach and a pluggable shader system.
 
