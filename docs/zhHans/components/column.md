@@ -39,7 +39,7 @@ column(ColumnArgs::default(), |scope| {
 
 - `args: ColumnArgs`
 
-  该参数用于配置 `column` 组件的样式，包括宽高、对齐方式等。使用 `ColumnArgsBuilder` 来构建它。
+  该参数用于配置 `column` 组件的样式，包括宽高、对齐方式等。可以使用 `ColumnArgsBuilder` 来构建它。
 
 - `scope_config: F`
 

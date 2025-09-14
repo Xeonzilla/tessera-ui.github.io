@@ -14,7 +14,7 @@ Displays a progress bar indicating the completion progress of a task. This compo
 ## Arguments
 
 - `args: ProgressArgs`
-  This argument configures the style of the `progress` component. Use `ProgressArgsBuilder` to construct it.
+  This argument configures the style of the `progress` component. You can use `ProgressArgsBuilder` to construct it.
 
 ## Preview
 

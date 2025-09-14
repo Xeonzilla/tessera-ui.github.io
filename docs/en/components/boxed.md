@@ -54,7 +54,7 @@ boxed(
 
 - `args: BoxedArgs`
 
-  This argument configures the `boxed` component's style, including width, height, alignment, etc. Use `BoxedArgsBuilder` to construct it.
+  This argument configures the `boxed` component's style, including width, height, alignment, etc. You can use `BoxedArgsBuilder` to construct it.
 
 - `scope_config: F`
 

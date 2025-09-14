@@ -54,7 +54,7 @@ boxed(
 
 - `args: BoxedArgs`
 
-  该参数用于配置 `boxed` 组件的样式，包括宽高、对齐方式等。使用 `BoxedArgsBuilder` 来构建它。
+  该参数用于配置 `boxed` 组件的样式，包括宽高、对齐方式等。可以使用 `BoxedArgsBuilder` 来构建。
 
 - `scope_config: F`
   该参数是一个闭包，用于添加子组件到 `boxed` 组件中。闭包接收一个 `&mut BoxedScope` 参数，使用它的 `child`、`child_weighted` 等方法来添加子组件。

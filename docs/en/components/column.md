@@ -39,7 +39,7 @@ column(ColumnArgs::default(), |scope| {
 
 - `args: ColumnArgs`
 
-  This argument configures the `column` component's style including width, height, alignment, etc. Use `ColumnArgsBuilder` to construct it.
+  This argument configures the `column` component's style including width, height, alignment, etc. You can use `ColumnArgsBuilder` to construct it.
 
 - `scope_config: F`
 

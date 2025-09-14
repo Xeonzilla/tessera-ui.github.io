@@ -15,7 +15,7 @@ The `switch` component displays a toggle that can switch between on and off stat
 
 - `args: impl Into<SwitchArgs>`
 
-  This argument configures the style of the `switch` component, including size, color, border, and other properties. Use `SwitchArgsBuilder` to construct it.
+  This argument configures the style of the `switch` component, including size, color, border, and other properties. You can use `SwitchArgsBuilder` to construct it.
 
 - `state: Arc<RwLock<SwitchState>>`
 

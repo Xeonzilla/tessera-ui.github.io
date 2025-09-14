@@ -14,7 +14,7 @@ pub fn progress(args: impl Into<ProgressArgs>)
 ## 参数
 
 - `args: ProgressArgs`
-  该参数用于配置 `progress` 组件的样式。使用 `ProgressArgsBuilder` 来构建它。
+  该参数用于配置 `progress` 组件的样式。可以使用 `ProgressArgsBuilder` 来构建。
 
 ## 预览
 

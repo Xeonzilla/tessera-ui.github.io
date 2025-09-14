@@ -37,7 +37,7 @@ row(RowArgs::default(), |scope| {
 
 - `args: RowArgs`
 
-  该参数用于配置 `row` 组件的样式，包括宽高、对齐方式等。使用 `RowArgsBuilder` 来构建它。
+  该参数用于配置 `row` 组件的样式，包括宽高、对齐方式等。可以使用 `RowArgsBuilder` 来构建它。
 
 - `scope_config: F`
 

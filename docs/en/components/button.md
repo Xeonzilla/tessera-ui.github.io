@@ -19,7 +19,7 @@ The `button` component is a button typically used to trigger an action. It can c
 
 - `args: impl Into<ButtonArgs>`
 
-  This argument configures the style and behavior of the `button` component, including background color, border, shadow, corner radius, etc. Use `ButtonArgsBuilder` to construct this argument.
+  This argument configures the style and behavior of the `button` component, including background color, border, shadow, corner radius, etc. You can use `ButtonArgsBuilder` to construct this argument.
 
 - `ripple_state: Arc<RippleState>`
 

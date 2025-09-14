@@ -15,7 +15,7 @@ pub fn switch(args: impl Into<SwitchArgs>, state: Arc<RwLock<SwitchState>>)
 
 - `args: impl Into<SwitchArgs>`
 
-  该参数用于配置 `switch` 组件的样式，包括大小、颜色、边框等属性。可以通过 `SwitchArgsBuilder` 来构建。
+  该参数用于配置 `switch` 组件的样式，包括大小、颜色、边框等属性。可以使用 `SwitchArgsBuilder` 来构建。
 
 - `state: Arc<RwLock<SwitchState>>`
 

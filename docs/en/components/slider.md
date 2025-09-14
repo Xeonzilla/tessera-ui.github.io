@@ -15,7 +15,7 @@ The `slider` component displays an interactive slider that lets the user select 
 
 - `args: impl Into<SliderArgs>`
 
-  This argument configures the slider's style, including size, color, border, progress, etc. It is also where you register progress update callbacks. Use `SliderArgsBuilder` to construct it.
+  This argument configures the slider's style, including size, color, border, progress, etc. It is also where you register progress update callbacks. You can use `SliderArgsBuilder` to construct it.
 
 - `state: Arc<RwLock<SliderState>>`
 

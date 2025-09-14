@@ -37,7 +37,7 @@ row(RowArgs::default(), |scope| {
 
 - `args: RowArgs`
 
-  This argument configures the `row` component's style including width, height, alignment, etc. Use `RowArgsBuilder` to construct it.
+  This argument configures the `row` component's style including width, height, alignment, etc. You can use `RowArgsBuilder` to construct it.
 
 - `scope_config: F`
 

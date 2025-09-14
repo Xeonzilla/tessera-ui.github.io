@@ -15,7 +15,7 @@ pub fn slider(args: impl Into<SliderArgs>, state: Arc<RwLock<SliderState>>)
 
 - `args: impl Into<SliderArgs>`
 
-  该参数用于配置 `slider` 组件的样式，包括大小、颜色、边框、进度等属性。同时滑动进度更新回调也需在此注册。可以通过 `SliderArgsBuilder` 来构建。
+  该参数用于配置 `slider` 组件的样式，包括大小、颜色、边框、进度等属性。同时滑动进度更新回调也需在此注册。可以使用 `SliderArgsBuilder` 来构建。
 
 - `state: Arc<RwLock<SliderState>>`
 
