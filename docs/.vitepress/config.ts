@@ -9,7 +9,7 @@ const vitePressConfig: UserConfig = {
   description: "A declarative, immediate-mode UI framework for Rust",
 
   sitemap: {
-    hostname: 'https://tessera-ui.github.io/',
+    hostname: "https://tessera-ui.github.io/",
   },
 
   head: [
@@ -72,6 +72,7 @@ const vitePressSidebarConfigs = supportedLocales.map((lang) => ({
   ...(lang === rootLocale ? {} : { basePath: `/${lang}/` }),
   documentRootPath: `docs/${lang}`,
   resolvePath: lang === rootLocale ? "/" : `/${lang}/`,
+  collapsed: true,
 }));
 
 const vitePressI18nConfig: VitePressI18nOptions = {
