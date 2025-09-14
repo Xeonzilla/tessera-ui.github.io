@@ -23,7 +23,7 @@ pub fn button(
 
 - `ripple_state: Arc<RippleState>`
 
-  此参数为点击水波纹动画的状态，必须传入一个有效的`RippleState`实例，以启用水波纹动画效果。这点不同于`surface`组件，其`ripple_state`参数可以传入`None`来禁用水波纹动画。
+  此参数为点击水波纹动画的状态，必须传入一个有效的`RippleState`实例，以启用水波纹动画效果。这点不同于`surface`组件，请注意。
 
 - `child: impl FnOnce()`
 

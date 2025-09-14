@@ -23,7 +23,7 @@ The `button` component is a button typically used to trigger an action. It can c
 
 - `ripple_state: Arc<RippleState>`
 
-  The state for the click ripple animation. You must provide a valid `RippleState` instance to enable the ripple animation. This differs from the `surface` component, whose `ripple_state` parameter can be passed as `None` to disable the ripple.
+  The state for the click ripple animation. You must provide a valid `RippleState` instance to enable the ripple animation. This differs from the `surface` component.
 
 - `child: impl FnOnce()`
 
