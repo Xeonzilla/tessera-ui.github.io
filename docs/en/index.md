@@ -3,7 +3,7 @@ layout: home
 
 hero:
   text: "<span class='rotating-words'><span>Declarative</span><span>Immediate-mode</span><span>Parallelized</span><span>Cross-platform</span><span>Shader-first</span></span><br>UI framework for Rust"
-  tagline: "Build next-generation interfaces in Rust with GPU-first performance and a modern, ergonomic component model."
+  tagline: "Build next-generation interfaces with GPU-first performance and a modern, ergonomic component model."
   actions:
     - theme: brand
       text: Get Started
