@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  text: "为 Rust 设计的<br><span class='rotating-words'><span>声明式</span><span>立即模式</span><span>并行化</span><span>跨平台</span><span>着色器优先</span></span><br>UI 框架"
+  text: "<span class='rotating-words'><span>声明式</span><span>立即模式</span><span>并行化</span><span>跨平台</span><span>着色器优先</span></span><br>Rust UI 框架"
   tagline: "在 Rust 中构建下一代界面 —— GPU 优先的性能与现代化、符合人体工程学的组件模型。"
   actions:
     - theme: brand
