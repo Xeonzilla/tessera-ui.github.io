@@ -5,7 +5,7 @@ order: 2
 
 # Component
 
-In `tessera`, a component (Component) is the basic building block of the user interface. It allows developers to create complex UIs by composing these components.
+In `tessera`, a component is the basic building block of the user interface. It allows developers to create complex UIs by composing these components.
 
 `tessera` expresses components as functions, usually by marking functions with the `#[tessera]` macro. Below we also refer to components as "tessera".
 
