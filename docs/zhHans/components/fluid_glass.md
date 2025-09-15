@@ -31,7 +31,7 @@ pub fn fluid_glass(
 
 ## 预览
 
-<video width="640" height="360" autoplay loop muted>
+<video autoplay loop muted>
 
 <source src="/fluid_glass_example.mp4" type="video/mp4">
 Your browser does not support the video tag
