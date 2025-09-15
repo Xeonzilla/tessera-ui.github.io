@@ -37,6 +37,13 @@ const vitePressConfig: UserConfig = {
           window.location.replace(base + 'zhHans/' + search + hash);
         }
       }
+
+      if (pathname.startsWith(base + 'zh/')) {
+        // redirect /zh/ to /zhHans/
+        const newPath = pathname.replace(base + 'zh/', base + 'zhHans/');
+        window.location.replace(newPath + search + hash);
+        return;
+      }
     })();
     `,
     ],
