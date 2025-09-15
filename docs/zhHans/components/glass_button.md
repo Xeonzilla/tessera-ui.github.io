@@ -26,7 +26,7 @@ pub fn glass_button(
 
 - `child: impl FnOnce() + Send + Sync + 'static`
 
-    此参数为 `glass_button` 组件的子组件，可以是任何`#[tessera]`函数。
+  此参数为 `glass_button` 组件的子组件，可以是任何`#[tessera]`函数。
 
 ## 预览
 
