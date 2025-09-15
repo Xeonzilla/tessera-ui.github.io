@@ -18,17 +18,27 @@ const vitePressConfig: UserConfig = {
       "script",
       {},
       `
-      (function() {
-        const { pathname, search, hash } = window.location;
-        const base = '/';
-        if (pathname === base || pathname === (base + 'index.html')) {
-          const userLang = navigator.language;
-          if (userLang.toLowerCase().startsWith('zh')) {
-            window.location.replace(base + 'zhHans/' + search + hash);
-          }
+    (function() {
+      const { pathname, search, hash } = window.location;
+      const base = '/';
+
+      const prefixes = ['/tessera-official-website', '/tessera-offcial-website'];
+      for (const prefix of prefixes) {
+        if (pathname.startsWith(prefix)) {
+          const newPath = pathname.slice(prefix.length) || '/';
+          window.location.replace(newPath + search + hash);
+          return;
         }
-      })();
-      `,
+      }
+
+      if (pathname === base || pathname === (base + 'index.html')) {
+        const userLang = navigator.language;
+        if (userLang.toLowerCase().startsWith('zh')) {
+          window.location.replace(base + 'zhHans/' + search + hash);
+        }
+      }
+    })();
+    `,
     ],
   ],
 
