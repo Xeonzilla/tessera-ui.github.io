@@ -1,5 +1,5 @@
 ---
-title: Glass Button component
+title: Glass Button
 order: 13
 ---
 

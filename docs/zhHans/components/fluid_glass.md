@@ -1,5 +1,5 @@
 ---
-title: Fluid Glass 组件
+title: Fluid Glass
 order: 12
 ---
 

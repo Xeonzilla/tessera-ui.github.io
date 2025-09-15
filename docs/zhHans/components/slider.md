@@ -1,5 +1,5 @@
 ---
-title: Slider 组件
+title: Slider
 order: 5
 ---
 

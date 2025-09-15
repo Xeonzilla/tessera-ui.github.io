@@ -1,5 +1,5 @@
 ---
-title: Glass Progress 组件
+title: Glass Progress
 order: 16
 ---
 

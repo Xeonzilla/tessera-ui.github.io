@@ -1,5 +1,5 @@
 ---
-title: Boxed component
+title: Boxed
 order: 8
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Bottom Navigation Bar 组件
+title: Bottom Navigation Bar
 order: 20
 ---
 

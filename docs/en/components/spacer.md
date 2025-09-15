@@ -1,5 +1,5 @@
 ---
-title: Spacer component
+title: Spacer
 order: 10
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Glass Switch component
+title: Glass Switch
 order: 14
 ---
 

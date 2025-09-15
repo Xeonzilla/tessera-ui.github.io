@@ -1,5 +1,5 @@
 ---
-title: Spacer 组件
+title: Spacer
 order: 10
 ---
 

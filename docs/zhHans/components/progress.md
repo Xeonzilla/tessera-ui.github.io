@@ -1,5 +1,5 @@
 ---
-title: Progress 组件
+title: Progress
 order: 9
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Button component
+title: Button
 order: 2
 ---
 

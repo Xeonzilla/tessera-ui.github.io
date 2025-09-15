@@ -1,5 +1,5 @@
 ---
-title: Button 组件
+title: Button
 order: 2
 ---
 

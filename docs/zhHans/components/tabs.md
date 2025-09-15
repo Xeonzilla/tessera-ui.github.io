@@ -1,5 +1,5 @@
 ---
-title: Tabs 组件
+title: Tabs
 order: 19
 ---
 

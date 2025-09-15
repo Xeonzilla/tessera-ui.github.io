@@ -1,5 +1,5 @@
 ---
-title: Dialog 组件
+title: Dialog
 order: 21
 ---
 

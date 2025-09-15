@@ -1,5 +1,5 @@
 ---
-title: Column 组件
+title: Column
 order: 6
 ---
 

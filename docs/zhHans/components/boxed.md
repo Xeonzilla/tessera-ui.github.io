@@ -1,5 +1,5 @@
 ---
-title: Boxed 组件
+title: Boxed
 order: 8
 ---
 

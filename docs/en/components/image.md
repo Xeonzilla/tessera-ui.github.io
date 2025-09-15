@@ -1,5 +1,5 @@
 ---
-title: Image component
+title: Image
 order: 11
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Switch 组件
+title: Switch
 order: 4
 ---
 

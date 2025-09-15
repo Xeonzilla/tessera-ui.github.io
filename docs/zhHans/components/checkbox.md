@@ -1,5 +1,5 @@
 ---
-title: CheckBox 组件
+title: CheckBox
 order: 17
 ---
 

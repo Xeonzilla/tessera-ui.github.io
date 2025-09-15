@@ -1,5 +1,5 @@
 ---
-title: Glass Slider component
+title: Glass Slider
 order: 15
 ---
 

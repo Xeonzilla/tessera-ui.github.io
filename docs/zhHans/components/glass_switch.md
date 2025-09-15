@@ -1,5 +1,5 @@
 ---
-title: Glass Switch 组件
+title: Glass Switch
 order: 14
 ---
 

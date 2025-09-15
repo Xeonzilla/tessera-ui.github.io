@@ -1,5 +1,5 @@
 ---
-title: Image 组件
+title: Image
 order: 11
 ---
 

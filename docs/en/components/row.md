@@ -1,5 +1,5 @@
 ---
-title: Row component
+title: Row
 order: 7
 ---
 

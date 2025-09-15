@@ -1,5 +1,5 @@
 ---
-title: Checkbox component
+title: Checkbox
 order: 17
 ---
 

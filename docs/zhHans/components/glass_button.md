@@ -1,5 +1,5 @@
 ---
-title: Glass Button 组件
+title: Glass Button
 order: 13
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Glass Progress component
+title: Glass Progress
 order: 16
 ---
 

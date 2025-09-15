@@ -1,5 +1,5 @@
 ---
-title: Text Editor 组件
+title: Text Editor
 order: 18
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Component"
+title: Component
 order: 2
 ---
 

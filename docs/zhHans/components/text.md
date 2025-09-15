@@ -1,5 +1,5 @@
 ---
-title: Text 组件
+title: Text
 order: 3
 ---
 

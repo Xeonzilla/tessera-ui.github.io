@@ -1,5 +1,5 @@
 ---
-title: Glass Slider 组件
+title: Glass Slider
 order: 15
 ---
 
