@@ -16,4 +16,4 @@ Tessera 的诞生，是为了给 Rust 生态系统带来一个拥有 GPU 优先�
 
 ## 许可证
 
-本项目采用 [MIT 许可证](/TESSERA-LICENSE-MIT.txt) 或 [Apache 许可证 2.0](TESSERA-LICENSE-APACHE.txt) 的双许可证模式，您可以选择其中任意一种。
+本项目采用 [MIT 许可证](/TESSERA-LICENSE-MIT.txt) 或 [Apache 许可证 2.0](/TESSERA-LICENSE-APACHE.txt) 的双许可证模式，您可以选择其中任意一种。
