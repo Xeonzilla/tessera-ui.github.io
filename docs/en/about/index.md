@@ -16,4 +16,4 @@ The project aims to provide Rust with a modern, permissive, developer-friendly, 
 
 ## License
 
-This project is dual-licensed under the [MIT License](../LICENSE) and the [Apache License 2.0](../LICENSE); you may choose either.
+This project is dual-licensed under the [MIT License](/TESSERA-LICENSE-MIT.txt) and the [Apache License 2.0](/TESSERA-LICENSE-APACHE.txt); you may choose either.
