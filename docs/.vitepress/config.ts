@@ -82,6 +82,7 @@ const commonVitePressSidebarConfig = {
   useTitleFromFrontmatter: true,
   useFolderTitleFromIndexFile: true,
   sortMenusByFrontmatterOrder: true,
+  manualSortFileNameByPriority: ["about", "guide", "components"],
 };
 
 const vitePressSidebarConfigs = supportedLocales.map((lang) => ({
