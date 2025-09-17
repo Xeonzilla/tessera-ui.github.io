@@ -33,14 +33,14 @@ fn app() {
             .unwrap(),
         None,
         || {
-            boxed!(
+            boxed(
                 BoxedArgs {
                     width: DimensionValue::FILLED,
                     height: DimensionValue::FILLED,
                     alignment: Alignment::Center,
                 },
                 |scope| {
-                    scope.child(|| text("Hello, Tessera!"));
+                    scope.child(|| text("Hello, Tessera!"))
                 }
             )
         },
