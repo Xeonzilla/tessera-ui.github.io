@@ -13,7 +13,7 @@ order: 1
 
 - 已安装 [Rust](https://www.rust-lang.org)
 
-## 使用cli工具创建新项目
+## 创建新项目
 
 首先，确保你已经安装了 `cargo-tessera`，它集成了创建、开发基于 `tessera` App项目所需的各种功能。
 

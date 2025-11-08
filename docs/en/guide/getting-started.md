@@ -13,7 +13,7 @@ This section guides you through creating a basic `tessera` application.
 
 - The [Rust](https://www.rust-lang.org) programming language
 
-## Create a project with the CLI
+## Create a project
 
 Install the `cargo-tessera` CLI, which bundles project scaffolding, dev server, build helpers, and platform tooling for Tessera apps (we'll rely on it throughout the docs).
 
