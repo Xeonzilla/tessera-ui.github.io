@@ -13,90 +13,35 @@ This section guides you through creating a basic `tessera` application.
 
 - The [Rust](https://www.rust-lang.org) programming language
 
-## Create a new project
+## Create a project with the CLI
 
-Currently we don't provide a scaffolding tool to create new projects (planned for the future). You can manually create a new Rust project and initialize it as a `tessera` project with:
-
-```bash
-cargo new my-tessera-app
-cd my-tessera-app
-```
-
-## Add dependencies
-
-For a basic example we only need the `tessera-ui` and `tessera-ui-basic-components` dependencies.
-
-`tessera-ui` is the core UI library for `tessera`, providing infrastructure and tools to build the UI, while `tessera-ui-basic-components` provides common base components. They are decoupled; if you don't need the basic components you can omit the second dependency.
-
-For our simple example, reimplementing shaders and layouts is too complex, so `tessera-ui-basic-components` is required.
+Install the `cargo-tessera` CLI, which bundles project scaffolding, dev server, build helpers, and platform tooling for Tessera apps (we'll rely on it throughout the docs).
 
 ```bash
-cargo add tessera-ui
-cargo add tessera-ui-basic-components
+cargo install cargo-tessera
+cargo tessera new
 ```
 
-## Create your first `tessera` app
+The CLI walks you through naming the project and choosing a template—pick the `blank` template for this tutorial.
 
-This tutorial will guide you to create a basic `tessera` app with a simple white background and "Hello, World!" text.
+## Your first `tessera`
 
-### Create the renderer
+In `tessera`, every component is a function marked with the `tessera` macro, so we often call components “tessera” as well.
 
-The entry point of a `tessera` app is the renderer, which handles window management, the render loop, and event handling. We must create and run a renderer instance.
+### Add a background
 
-Replace the default `main` function in `src/main.rs` with the following code:
+Open your project's `src/lib.rs` and locate the generated `app` function, which should currently look like:
 
 ```rust
-use tessera_ui::{Renderer, renderer::TesseraConfig};
-
-fn main() {
-    // Configure the renderer here
-    let config = TesseraConfig {
-        window_title: "Tessera Example".to_string(), // Window title
-        ..Default::default()                         // Use default values for other settings
-    };
-    Renderer::run_with_config(
-        || {}, // UI entry function—implemented in the next step; pass an empty closure for now
-        |app| {
-            tessera_ui_basic_components::pipelines::register_pipelines(app); // Register pipelines required by tessera-ui-basic-components
-        },
-        config,
-    )
-    .unwrap();
+#[tessera]
+fn app() {
+    // Empty application
 }
 ```
 
-Run `cargo run` to see a black or transparent window.
-
-![Black window](/getting-start-1.png)
-
-### Add your first `tessera`
-
-In `tessera`, each component is a function marked with the `tessera` macro; we also call components "tessera".
-
-#### Add a background
-
-First add a maximized white `surface` as the background.
+We'll replace that empty body with a maximized white `surface` acting as the background.
 
 ```rust
-use tessera_ui::{Color, DimensionValue, Renderer, renderer::TesseraConfig, tessera};
-use tessera_ui_basic_components::surface::{SurfaceArgsBuilder, surface};
-
-fn main() {
-    // Configure the renderer here
-    let config = TesseraConfig {
-        window_title: "Tessera Example".to_string(), // Window title
-        ..Default::default()                         // Use default values for other settings
-    };
-    Renderer::run_with_config(
-        || app(), // UI entry function; app is the top-level tessera
-        |app| {
-            tessera_ui_basic_components::pipelines::register_pipelines(app); // Register pipelines required by tessera-ui-basic-components
-        },
-        config,
-    )
-    .unwrap();
-}
-
 #[tessera]
 fn app() {
     surface(
@@ -114,44 +59,25 @@ fn app() {
 }
 ```
 
-Run `cargo run` again to see a white window.
+Once `cargo tessera dev` rebuilds (or after restarting it), you'll see a white window.
 
 ![White window](/getting-start-2.png)
 
-#### Add text
+### Add text
 
-Next add a text component displaying "Hello, World!" on the background.
+Next add a text component displaying “Hello, World!” on top of that surface.
 
 ```rust
-use tessera_ui::{Color, DimensionValue, Renderer, renderer::TesseraConfig, tessera};
-use tessera_ui_basic_components::{surface::{surface, SurfaceArgsBuilder}, text::text};
-
-fn main() {
-    // Configure the renderer here
-    let config = TesseraConfig {
-        window_title: "Tessera Example".to_string(), // Window title
-        ..Default::default()                         // Use default values for other settings
-    };
-    Renderer::run_with_config(
-        || app(), // UI entry function is placed in app below; you can also write it inline
-        |app| {
-            tessera_ui_basic_components::pipelines::register_pipelines(app); // Register pipelines required by tessera-ui-basic-components
-        },
-        config,
-    )
-    .unwrap();
-}
-
 #[tessera]
 fn app() {
     surface(
         SurfaceArgsBuilder::default()
-            .color(Color::WHITE) // Background color
-            .width(DimensionValue::FILLED) // Fill parent width
-            .height(DimensionValue::FILLED) // Fill parent height
+            .color(Color::WHITE)
+            .width(DimensionValue::FILLED)
+            .height(DimensionValue::FILLED)
             .build()
             .unwrap(),
-        None, // Ripple state for click animations; None for background surface
+        None,
         || {
             text("Hello, World!") // HELLO THERE :)
         },
@@ -159,6 +85,10 @@ fn app() {
 }
 ```
 
-Running `cargo run` now shows a white window with black "Hello, World!" text.
+After the dev server rebuilds, you'll see a white window with black “Hello, World!” text.
 
 ![HelloHello](/getting-start-3.png)
+
+## What's next
+
+Nice work! You now have a minimal Tessera app running. Continue with the [Tessera component model](../guide/component.md) to learn how components compose and manage state.
