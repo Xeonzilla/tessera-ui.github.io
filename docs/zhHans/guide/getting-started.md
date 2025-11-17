@@ -77,7 +77,7 @@ fn app() {
 fn app() {
     surface(
         SurfaceArgsBuilder::default()
-            .color(Color::WHITE) // 设置surface的背景颜色为白色
+            .style(Color::WHITE.into()) // 设置surface的背景颜色为白色
             .width(DimensionValue::FILLED) // 这代表对surface的约束是填满父组件宽度
             .height(DimensionValue::FILLED) // 这代表对surface的约束是填满父组件高度
             .build()

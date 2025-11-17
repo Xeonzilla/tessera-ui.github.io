@@ -46,7 +46,7 @@ We'll replace that empty body with a maximized white `surface` acting as the bac
 fn app() {
     surface(
         SurfaceArgsBuilder::default()
-            .color(Color::WHITE) // Background color
+            .style(Color::WHITE.into()) // Background color
             .width(DimensionValue::FILLED) // Fill parent width
             .height(DimensionValue::FILLED) // Fill parent height
             .build()
