@@ -72,7 +72,7 @@ Next add a text component displaying “Hello, World!” on top of that surface.
 fn app() {
     surface(
         SurfaceArgsBuilder::default()
-            .color(Color::WHITE)
+            .style(Color::WHITE.into())
             .width(DimensionValue::FILLED)
             .height(DimensionValue::FILLED)
             .build()

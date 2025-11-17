@@ -26,7 +26,7 @@ Tessera 使用 Rust 的宏系统（`#[tessera]`）允许开发者以函数的形
 fn app() {
     surface(
         SurfaceArgsBuilder::default()
-            .color(Color::WHITE)
+            .style(Color::WHITE.into())
             .width(DimensionValue::FILLED)
             .height(DimensionValue::FILLED)
             .build()
@@ -79,7 +79,7 @@ fn main() {
 fn app(ripple_state: Arc<RippleState>) {
     surface(
         SurfaceArgsBuilder::default()
-            .color(Color::WHITE)
+            .style(Color::WHITE.into())
             .width(DimensionValue::FILLED)
             .height(DimensionValue::FILLED)
             .build()

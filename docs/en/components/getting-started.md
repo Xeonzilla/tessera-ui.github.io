@@ -92,7 +92,7 @@ fn main() {
 fn app() {
     surface(
         SurfaceArgsBuilder::default()
-            .color(Color::WHITE) // Set surface background color to white
+            .style(Color::WHITE.into()) // Set surface background color to white
             .width(DimensionValue::FILLED) // Fill parent width
             .height(DimensionValue::FILLED) // Fill parent height
             .build()
