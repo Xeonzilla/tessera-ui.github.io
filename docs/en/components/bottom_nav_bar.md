@@ -6,18 +6,18 @@ order: 20
 # Bottom Navigation Bar
 
 ```rust
-pub fn bottom_nav_bar<F>(state: Arc<RwLock<BottomNavBarState>>, scope_config: F)
+pub fn bottom_nav_bar<F>(state: BottomNavBarState, scope_config: F)
 where
-    F: FnOnce(&mut BottomNavBarScope<'_>),
+    F: FnOnce(&mut BottomNavBarScope),
 ```
 
 The `bottom_nav_bar` component is an interactive bottom navigation bar that allows users to switch between multiple navigation items.
 
 ## Arguments
 
-- `state: Arc<RwLock<BottomNavBarState>>`
+- `state: BottomNavBarState`
 
-  This argument manages the bottom navigation bar's state, including the currently selected item index and animation progress. It can also be used to get the current/previous selected index.
+  This argument manages the bottom navigation bar's state, including the currently selected item index and animation progress. `BottomNavBarState` is a clonable struct that encapsulates a shared reference to the state internally. It can also be used to get the current/previous selected index.
 
 - `scope_config: F`
 

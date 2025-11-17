@@ -8,7 +8,7 @@ order: 18
 ```rust
 pub fn text_editor(
     args: impl Into<TextEditorArgs>,
-    state: Arc<RwLock<TextEditorState>>,
+    state: TextEditorState,
 )
 ```
 
@@ -22,9 +22,9 @@ The `text_editor` component is an interactive multi-line text editor that allows
 
   The most important field is `pub on_change: Arc<dyn Fn(String) -> String + Send + Sync>`, a callback invoked when the text changes. It receives the new text as an argument and should return the text to display. Use this callback to implement input filtering, formatting, etc. Its default behavior returns an empty string, so if you don't set this callback the editor will not accept input — take care.
 
-- `state: Arc<RwLock<TextEditorState>>`
+- `state: TextEditorState`
 
-  Manages the editor state, including current text content, cursor position, and selection range.
+  Manages the editor state, including current text content, cursor position, and selection range. `TextEditorState` is a clonable struct that encapsulates a shared reference to the state internally.
 
 ## Preview
 

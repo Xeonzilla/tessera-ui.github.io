@@ -8,8 +8,8 @@ order: 13
 ```rust
 pub fn glass_button(
     args: impl Into<GlassButtonArgs>,
-    ripple_state: Arc<RippleState>,
-    child: impl FnOnce() + Send + Sync + 'static,
+    ripple_state: RippleState,
+    child: impl FnOnce(),
 )
 ```
 
@@ -21,11 +21,11 @@ The `glass_button` component is a glass-style button built on top of the `fluid_
 
   This argument configures the style and behavior of the `glass_button` component, including background color, border, refraction, dispersion, and other properties. Use `GlassButtonArgsBuilder` to construct it.
 
-- `ripple_state: Arc<RippleState>`
+- `ripple_state: RippleState`
 
-  The state for the click ripple animation. You must provide a valid `RippleState` instance to enable the ripple effect. This differs from the `fluid_glass` component.
+  The state for the click ripple animation. You must provide a valid `RippleState` instance to enable the ripple effect. `RippleState` is a clonable struct that encapsulates a shared reference to the state internally.
 
-- `child: impl FnOnce() + Send + Sync + 'static`
+- `child: impl FnOnce()`
 
   The child component of `glass_button`, can be any `#[tessera]` function.
 

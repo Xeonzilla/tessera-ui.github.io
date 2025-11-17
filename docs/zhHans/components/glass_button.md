@@ -8,8 +8,8 @@ order: 13
 ```rust
 pub fn glass_button(
     args: impl Into<GlassButtonArgs>,
-    ripple_state: Arc<RippleState>,
-    child: impl FnOnce() + Send + Sync + 'static,
+    ripple_state: RippleState,
+    child: impl FnOnce(),
 )
 ```
 
@@ -21,10 +21,10 @@ pub fn glass_button(
 
   此参数用于配置`glass_button`组件的样式和行为，包括背景颜色、边框、折射、色散等属性。可以通过`GlassButtonArgsBuilder`来构建这个参数。
 
-- `ripple_state: Arc<RippleState>`
-  此参数为点击水波纹动画的状态，必须传入一个有效的 `RippleState` 实例，以启用水波纹动画效果。这点不同于 `fluid_glass` 组件。
+- `ripple_state: RippleState`
+  此参数为点击水波纹动画的状态，必须传入一个有效的 `RippleState` 实例，以启用水波纹动画效果。`RippleState` 是一个可克隆的结构体，它内部封装了对状态的共享引用。
 
-- `child: impl FnOnce() + Send + Sync + 'static`
+- `child: impl FnOnce()`
 
   此参数为 `glass_button` 组件的子组件，可以是任何`#[tessera]`函数。
 

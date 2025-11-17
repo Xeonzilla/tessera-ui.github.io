@@ -1,4 +1,4 @@
----
+--- 
 title: Button
 order: 2
 ---
@@ -8,7 +8,7 @@ order: 2
 ```rust
 pub fn button(
     args: impl Into<ButtonArgs>,
-    ripple_state: Arc<RippleState>,
+    ripple_state: RippleState,
     child: impl FnOnce(),
 )
 ```
@@ -21,9 +21,9 @@ pub fn button(
 
   此参数用于配置`button`组件的样式和行为，包括背景颜色、边框、阴影、圆角等属性。可以通过`ButtonArgsBuilder`来构建这个参数。
 
-- `ripple_state: Arc<RippleState>`
+- `ripple_state: RippleState`
 
-  此参数为点击水波纹动画的状态，必须传入一个有效的`RippleState`实例，以启用水波纹动画效果。这点不同于`surface`组件，请注意。
+  此参数为点击水波纹动画的状态，必须传入一个有效的`RippleState`实例，以启用水波纹动画效果。`RippleState` 是一个可克隆的结构体，它内部封装了对状态的共享引用。
 
 - `child: impl FnOnce()`
 
@@ -32,3 +32,4 @@ pub fn button(
 ## 预览
 
 ![button](/button_example.gif)
+

@@ -8,7 +8,7 @@ order: 7
 ```rust
 pub fn row<F>(args: RowArgs, scope_config: F)
 where
-    F: FnOnce(&mut RowScope<'_>),
+    F: FnOnce(&mut RowScope),
 ```
 
 The `row` component arranges a set of child components horizontally.

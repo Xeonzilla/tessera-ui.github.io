@@ -8,10 +8,10 @@ order: 8
 ```rust
 pub fn boxed<F>(args: BoxedArgs, scope_config: F)
 where
-    F: FnOnce(&mut BoxedScope<'_>),
+    F: FnOnce(&mut BoxedScope),
 ```
 
-The `boxed` component is used to stack a set of child components.
+The `boxed` component is a container that overlays its children, aligning them relative to each other.
 
 Unlike other container components, `boxed` requires you to use methods like `BoxedScope::child` to add children, instead of calling child component functions directly inside the closure.
 
@@ -19,46 +19,34 @@ Unlike other container components, `boxed` requires you to use methods like `Box
 If you attempt to call child component functions directly inside the closure, the `boxed` component will panic at runtime.
 :::
 
-Below is a correct example of using `boxed`:
-
-```rust
-use tessera_ui_basic_components::{
-    boxed::{boxed, BoxedArgs},
-    surface::{surface, SurfaceArgs},
-    text::text,
-};
-
-boxed(
-    BoxedArgs {
-        alignment: Alignment::Center,
-        ..Default::default()
-    },
-    |scope| {
-        scope.child(|| {
-            surface(
-                SurfaceArgs {
-                    width: DimensionValue::from(Dp(300.0)),
-                    height: DimensionValue::from(Dp(300.0)),
-                    ..Default::default()
-                },
-                None,
-                || {},
-            )
-        });
-        scope.child(|| text("test"));
-    },
-);
-```
-
 ## Arguments
 
 - `args: BoxedArgs`
 
-  This argument configures the `boxed` component's style, including width, height, alignment, etc. You can use `BoxedArgsBuilder` to construct it.
+  This argument configures the `boxed` component's style, including width, height, and default alignment. You can use `BoxedArgsBuilder` to construct it.
 
 - `scope_config: F`
 
-  A closure used to add child components into the `boxed` component. The closure receives a `&mut BoxedScope` and you should use its `child`, `child_weighted`, etc. methods to add children.
+  A closure used to add child components into the `boxed` component. The closure receives a `&mut BoxedScope` and you should use its `child` and `child_with_alignment` methods to add children.
+
+## Examples
+
+```rust
+use tessera_ui_basic_components::boxed::{boxed, BoxedArgs};
+use tessera_ui_basic_components::text::{text, TextArgsBuilder};
+use tessera_ui_basic_components::alignment::Alignment;
+
+boxed(BoxedArgs::default(), |scope| {
+    // Add a child that will be in the background (rendered first).
+    scope.child(|| {
+        text(TextArgsBuilder::default().text("Background".to_string()).build().unwrap());
+    });
+    // Add another child aligned to the center, which will appear on top.
+    scope.child_with_alignment(Alignment::Center, || {
+        text(TextArgsBuilder::default().text("Foreground".to_string()).build().unwrap());
+    });
+});
+```
 
 ## Preview
 

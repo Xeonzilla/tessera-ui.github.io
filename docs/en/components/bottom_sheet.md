@@ -8,7 +8,7 @@ order: 22
 ```rust
 pub fn bottom_sheet_provider(
     args: BottomSheetProviderArgs,
-    state: Arc<RwLock<BottomSheetProviderState>>,
+    state: BottomSheetProviderState,
     main_content: impl FnOnce() + Send + Sync + 'static,
     bottom_sheet_content: impl FnOnce() + Send + Sync + 'static,
 )
@@ -22,9 +22,9 @@ The `bottom_sheet_provider` is used to create a bottom sheet dialog in your appl
 
   This argument configures the style of the dialog. Notably, `bottom_sheet_provider` supports both glass-style and non-glass-style dialogs. You can configure this via the `style: BottomSheetStyle` field of `BottomSheetProviderArgs`. The default is `BottomSheetStyle::Material` (the non-glass version).
 
-- `state: Arc<RwLock<BottomSheetProviderState>>`
+- `state: BottomSheetProviderState`
 
-  This argument manages the dialog's state, including whether the bottom sheet is open and the animation progress.
+  This argument manages the dialog's state, including whether the bottom sheet is open and the animation progress. `BottomSheetProviderState` is a clonable struct that encapsulates a shared reference to the state internally.
 
   Use its `open()` and `close()` methods to programmatically open and close the dialog.
 

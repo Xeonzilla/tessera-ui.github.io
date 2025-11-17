@@ -6,9 +6,9 @@ order: 19
 # Tabs
 
 ```rust
-pub fn tabs<F>(args: TabsArgs, state: Arc<RwLock<TabsState>>, scope_config: F)
+pub fn tabs<F>(args: TabsArgs, state: TabsState, scope_config: F)
 where
-    F: FnOnce(&mut TabsScope<'_>),
+    F: FnOnce(&mut TabsScope),
 ```
 
 The `tabs` component is an interactive tab component that allows users to switch between multiple tabs.
@@ -19,9 +19,9 @@ The `tabs` component is an interactive tab component that allows users to switch
 
   This argument configures the tabs' style. You can use `TabsArgsBuilder` to construct it.
 
-- `state: Arc<RwLock<TabsState>>`
+- `state: TabsState`
 
-  This argument manages the tabs' state, including the currently selected tab index and animation progress. It can also be used to programmatically switch tabs or to get the current/previous selected index.
+  This argument manages the tabs' state, including the currently selected tab index and animation progress. `TabsState` is a clonable struct that encapsulates a shared reference to the state internally. It can also be used to programmatically switch tabs or to get the current/previous selected index.
 
 - `scope_config: F`
 

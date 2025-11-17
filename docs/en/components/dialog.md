@@ -8,7 +8,7 @@ order: 21
 ```rust
 pub fn dialog_provider(
     args: DialogProviderArgs,
-    state: Arc<RwLock<DialogProviderState>>,
+    state: DialogProviderState,
     main_content: impl FnOnce(),
     dialog_content: impl FnOnce(f32) + Send + Sync + 'static,
 )
@@ -22,9 +22,9 @@ The `dialog_provider` component is used to display dialogs in an application.
 
   This argument configures the style of the dialog. Notably, `dialog_provider` supports both glass and non-glass dialog variants. It can be configured via the `style: DialogStyle` field of `DialogProviderArgs`. The default is `DialogStyle::Material`, i.e. the non-glass variant.
 
-- `state: Arc<RwLock<DialogProviderState>>`
+- `state: DialogProviderState`
 
-  This argument manages the dialog state, including whether the dialog is open and the animation progress.
+  This argument manages the dialog state, including whether the dialog is open and the animation progress. `DialogProviderState` is a clonable struct that encapsulates a shared reference to the state internally.
 
   Use its `open()` and `close()` methods to programmatically open and close the dialog.
 

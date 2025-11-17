@@ -8,7 +8,7 @@ order: 14
 ```rust
 pub fn glass_switch(
     args: impl Into<GlassSwitchArgs>,
-    state: Arc<RwLock<GlassSwitchState>>,
+    state: GlassSwitchState,
 )
 ```
 
@@ -20,9 +20,9 @@ pub fn glass_switch(
 
   该参数用于配置 `glass_switch` 组件的样式，包括大小、颜色、边框等属性。可以使用 `GlassSwitchArgsBuilder` 来构建。
 
-- `state: Arc<RwLock<GlassSwitchState>>`
+- `state: GlassSwitchState`
 
-  该参数用于管理 `glass_switch` 组件的状态，包括当前是开启还是关闭状态。可以通过 `GlassSwitchState::new(bool)` 来创建初始状态。使用`GlassSwitchState::toggle(&mut self)`方法可以切换开关状态。
+  该参数用于管理 `glass_switch` 组件的状态，包括当前是开启还是关闭状态。可以通过 `GlassSwitchState::new(bool)` 来创建初始状态。`GlassSwitchState` 是一个可克隆的结构体，它内部封装了对状态的共享引用。使用 `state.toggle()` 方法可以切换开关状态。
 
 ## 预览
 

@@ -8,7 +8,7 @@ order: 6
 ```rust
 pub fn column<F>(args: ColumnArgs, scope_config: F)
 where
-    F: FnOnce(&mut ColumnScope<'_>),
+    F: FnOnce(&mut ColumnScope),
 ```
 
 The `column` component arranges a set of child components vertically.

@@ -8,7 +8,7 @@ order: 12
 ```rust
 pub fn fluid_glass(
     args: FluidGlassArgs,
-    ripple_state: Option<Arc<RippleState>>,
+    ripple_state: Option<RippleState>,
     child: impl FnOnce(),
 )
 ```
@@ -21,9 +21,9 @@ pub fn fluid_glass(
 
   此参数用于配置`fluid_glass`组件的样式和行为，包括颜色、边框、阴影、圆角、模糊强度、折射率等属性。可以通过`FluidGlassArgsBuilder`来构建这个参数。
 
-- `ripple_state: Option<Arc<RippleState>>`
+- `ripple_state: Option<RippleState>`
 
-  此参数为点击水波纹动画的状态，如果传入`None`，则表示不启用水波纹动画。
+  此参数为点击水波纹动画的状态，如果传入`None`，则表示不启用水波纹动画。`RippleState` 是一个可克隆的结构体，它内部封装了对状态的共享引用。
 
 - `child: impl FnOnce()`
 

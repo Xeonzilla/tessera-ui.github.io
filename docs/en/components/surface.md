@@ -8,7 +8,7 @@ order: 1
 ```rust
 pub fn surface(
     args: SurfaceArgs,
-    ripple_state: Option<Arc<RippleState>>,
+    ripple_state: Option<RippleState>,
     child: impl FnOnce(),
 )
 ```
@@ -21,9 +21,9 @@ The `surface` component, as the name suggests, is a surface component, commonly 
 
 This argument configures the style and behavior of the `surface` component, including background color, border, shadow, corner radius, etc. Use `SurfaceArgsBuilder` to build this argument.
 
-- `ripple_state: Option<Arc<RippleState>>`
+- `ripple_state: Option<RippleState>`
 
-The state used for the click ripple animation. Passing `None` disables the ripple animation.
+The state used for the click ripple animation. Passing `None` disables the ripple animation. `RippleState` is a clonable struct that encapsulates a shared reference to the state internally.
 
 - `child: impl FnOnce()`
 

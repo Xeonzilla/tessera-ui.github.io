@@ -8,7 +8,7 @@ order: 23
 ```rust
 pub fn side_bar_provider(
     args: SideBarProviderArgs,
-    state: Arc<RwLock<SideBarProviderState>>,
+    state: SideBarProviderState,
     main_content: impl FnOnce() + Send + Sync + 'static,
     side_bar_content: impl FnOnce() + Send + Sync + 'static,
 )
@@ -22,9 +22,9 @@ The `side_bar_provider` is used to create a side-docked dialog in an application
 
   This argument configures the dialog's style. Notably, `side_bar_provider` supports both glass and non-glass variants. You can configure it via the `style: SideBarStyle` field of `SideBarProviderArgs`. The default is `SideBarStyle::Material` (non-glass).
 
-- `state: Arc<RwLock<SideBarProviderState>>`
+- `state: SideBarProviderState`
 
-  Manages the dialog state, including whether the sidebar is open and the animation progress.
+  Manages the dialog state, including whether the sidebar is open and the animation progress. `SideBarProviderState` is a clonable struct that encapsulates a shared reference to the state internally.
 
   Use its `open()` and `close()` methods to programmatically open and close the dialog.
 

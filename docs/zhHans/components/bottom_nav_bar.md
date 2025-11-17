@@ -6,18 +6,18 @@ order: 20
 # Bottom Navigation Bar
 
 ```rust
-pub fn bottom_nav_bar<F>(state: Arc<RwLock<BottomNavBarState>>, scope_config: F)
+pub fn bottom_nav_bar<F>(state: BottomNavBarState, scope_config: F)
 where
-    F: FnOnce(&mut BottomNavBarScope<'_>),
+    F: FnOnce(&mut BottomNavBarScope),
 ```
 
 `bottom_nav_bar` 组件是一个交互式的底部导航栏组件，允许用户在多个导航项之间切换。
 
 ## 参数
 
-- `state: Arc<RwLock<BottomNavBarState>>`
+- `state: BottomNavBarState`
 
-  此参数管理底部导航栏的状态，包括当前选中的导航项索引和动画进度等。值得一提的是也可以使用它获取当前/上次选中的导航项索引。
+  此参数管理底部导航栏的状态，包括当前选中的导航项索引和动画进度等。`BottomNavBarState` 是一个可克隆的结构体，它内部封装了对状态的共享引用。可以使用它获取当前/上次选中的导航项索引。
 
 - `scope_config: F`
 

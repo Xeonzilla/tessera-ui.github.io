@@ -6,9 +6,9 @@ order: 19
 # Tabs
 
 ```rust
-pub fn tabs<F>(args: TabsArgs, state: Arc<RwLock<TabsState>>, scope_config: F)
+pub fn tabs<F>(args: TabsArgs, state: TabsState, scope_config: F)
 where
-    F: FnOnce(&mut TabsScope<'_>),
+    F: FnOnce(&mut TabsScope),
 ```
 
 `tabs` 组件是一个交互式的标签页组件，允许用户在多个选项卡之间切换。
@@ -19,9 +19,9 @@ where
 
   此参数可以配置标签页的样式。可以使用 `TabsArgsBuilder` 来构建。
 
-- `state: Arc<RwLock<TabsState>>`
+- `state: TabsState`
 
-  此参数管理标签页的状态，包括当前选中的标签页索引和动画进度等。值得一提的是也可以使用它程序化地切换标签页或者获取当前/上次选中的标签页索引。
+  此参数管理标签页的状态，包括当前选中的标签页索引和动画进度等。`TabsState` 是一个可克隆的结构体，它内部封装了对状态的共享引用。值得一提的是也可以使用它程序化地切换标签页或者获取当前/上次选中的标签页索引。
 
 - `scope_config: F`
 

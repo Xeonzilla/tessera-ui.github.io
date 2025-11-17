@@ -8,7 +8,7 @@ order: 12
 ```rust
 pub fn fluid_glass(
     args: FluidGlassArgs,
-    ripple_state: Option<Arc<RippleState>>,
+    ripple_state: Option<RippleState>,
     child: impl FnOnce(),
 )
 ```
@@ -21,9 +21,9 @@ The `fluid_glass` component is typically used as a background or container for o
 
   This argument configures the style and behavior of the `fluid_glass` component, including color, border, shadow, corner radius, blur intensity, refractive index, and other properties. Use `FluidGlassArgsBuilder` to construct it.
 
-- `ripple_state: Option<Arc<RippleState>>`
+- `ripple_state: Option<RippleState>`
 
-  The state for the click ripple animation. Passing `None` disables the ripple animation.
+  The state for the click ripple animation. Passing `None` disables the ripple animation. `RippleState` is a clonable struct that encapsulates a shared reference to the state internally.
 
 - `child: impl FnOnce()`
 

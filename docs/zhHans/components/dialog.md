@@ -8,7 +8,7 @@ order: 21
 ```rust
 pub fn dialog_provider(
     args: DialogProviderArgs,
-    state: Arc<RwLock<DialogProviderState>>,
+    state: DialogProviderState,
     main_content: impl FnOnce(),
     dialog_content: impl FnOnce(f32) + Send + Sync + 'static,
 )
@@ -22,9 +22,9 @@ pub fn dialog_provider(
 
   该参数配置对话框的样式。值得一提的是，`dialog_provider` 同时支持玻璃态版本和非玻璃态版本的对话框。它可以通过 `DialogProviderArgs` 的 `style: DialogStyle` 字段来配置。默认为 `DialogStyle::Material`，即非玻璃态版本。
 
-- `state: Arc<RwLock<DialogProviderState>>`
+- `state: DialogProviderState`
 
-  该参数管理对话框的状态，包括对话框是否打开以及动画进度。
+  该参数管理对话框的状态，包括对话框是否打开以及动画进度。`DialogProviderState` 是一个可克隆的结构体，它内部封装了对状态的共享引用。
 
   使用其 `open()` 和 `close()` 方法可以程序化的打开和关闭对话框。
 

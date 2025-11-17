@@ -8,7 +8,7 @@ order: 15
 ```rust
 pub fn glass_slider(
     args: impl Into<GlassSliderArgs>,
-    state: Arc<RwLock<GlassSliderState>>,
+    state: GlassSliderState,
 )
 ```
 
@@ -20,9 +20,9 @@ pub fn glass_slider(
 
   该参数用于配置 `glass_slider` 组件的样式，包括大小、颜色、边框等。可以使用 `GlassSliderArgsBuilder` 来构建。
 
-- `state: Arc<RwLock<GlassSliderState>>`
+- `state: GlassSliderState`
 
-  该参数用于管理 `glass_slider` 组件的状态。
+  该参数用于管理 `glass_slider` 组件的状态。`GlassSliderState` 是一个可克隆的结构体，它内部封装了对状态的共享引用。
 
 ## 预览
 

@@ -26,12 +26,24 @@ pub enum ImageSource {
 }
 ```
 
-下面给出一个加载内嵌二进制的图片内容为 `ImageData` 的例子
+## 例子
+
+下面给出一个加载内嵌二进制的图片内容为 `ImageData` 的例子:
 
 ```rust
-let image_bytes = Arc::new(*include_bytes!("../../example/examples/assets/scarlet_ut.jpg"));
+use std::sync::Arc;
+use tessera_ui_basic_components::image::{
+    image, load_image_from_source, ImageArgsBuilder, ImageSource,
+};
+
+// 在实际应用中，您可能会在运行时从文件加载图片字节。
+// 在此示例中，我们在编译时包含字节。
+let image_bytes = Arc::new(*include_bytes!("../../assets/counter.png"));
 let image_data = load_image_from_source(&ImageSource::Bytes(image_bytes))
     .expect("Failed to load image");
+
+// 使用加载的数据渲染图片。
+image(image_data);
 ```
 
 ## 参数

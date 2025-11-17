@@ -8,7 +8,7 @@ order: 7
 ```rust
 pub fn row<F>(args: RowArgs, scope_config: F)
 where
-    F: FnOnce(&mut RowScope<'_>),
+    F: FnOnce(&mut RowScope),
 ```
 
 `row` 组件用于水平排列一组子组件。

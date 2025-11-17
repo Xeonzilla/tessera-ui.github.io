@@ -8,7 +8,7 @@ order: 6
 ```rust
 pub fn column<F>(args: ColumnArgs, scope_config: F)
 where
-    F: FnOnce(&mut ColumnScope<'_>),
+    F: FnOnce(&mut ColumnScope),
 ```
 
 `column` 组件用于垂直排列一组子组件。
