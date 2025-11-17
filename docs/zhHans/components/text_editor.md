@@ -8,7 +8,7 @@ order: 18
 ```rust
 pub fn text_editor(
     args: impl Into<TextEditorArgs>,
-    state: TextEditorStateHandle,
+    state: TextEditorState,
 )
 ```
 
@@ -24,7 +24,7 @@ pub fn text_editor(
 
 - `state: TextEditorState`
 
-  该参数管理文本编辑器的状态，包括当前文本内容、光标位置和选择范围。`TextEditorStateHandle` 是一个可克隆的句柄，它内部封装了 `Arc<RwLock<TextEditorState>>`，以隐藏锁的实现细节。请使用 `TextEditorStateHandle::new(Dp(14.0), None)` 构造演示状态。
+  该参数管理文本编辑器的状态，包括当前文本内容、光标位置和选择范围。`TextEditorState` 是一个可克隆的结构体，它内部封装了对状态的共享引用。
 
 ## 预览
 

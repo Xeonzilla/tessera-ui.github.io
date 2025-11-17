@@ -8,7 +8,7 @@ order: 18
 ```rust
 pub fn text_editor(
     args: impl Into<TextEditorArgs>,
-    state: TextEditorStateHandle,
+    state: TextEditorState,
 )
 ```
 
@@ -24,7 +24,7 @@ The `text_editor` component is an interactive multi-line text editor that allows
 
 - `state: TextEditorState`
 
-  Manages the editor state, including current text content, cursor position, and selection range. `TextEditorStateHandle` is a clonable handle that internally owns an `Arc<RwLock<TextEditorState>>` to hide lock management from the caller. Construct with `TextEditorStateHandle::new(Dp(14.0), None)`.
+  Manages the editor state, including current text content, cursor position, and selection range. `TextEditorState` is a clonable struct that encapsulates a shared reference to the state internally.
 
 ## Preview
 
