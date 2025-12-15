@@ -112,7 +112,7 @@ Perhaps an example will clarify. Suppose we have a stateful animation component 
 
 ```rust
 struct AnimatedBoxState {
-    width: Arc<AtomUsize>,
+    width: Arc<AtomicUsize>,
 }
 
 #[tessera]

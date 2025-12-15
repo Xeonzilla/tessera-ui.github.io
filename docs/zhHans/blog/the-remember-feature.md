@@ -112,7 +112,7 @@ fn foo(state: FooState) {
 
 ```rust
 struct AnimatedBoxState {
-    width: Arc<AtomUsize>,
+    width: Arc<AtomicUsize>,
 }
 
 #[tessera]
