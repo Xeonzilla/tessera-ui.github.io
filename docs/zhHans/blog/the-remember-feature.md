@@ -256,4 +256,4 @@ loop {
 
 不幸的是，由于宏的展开顺序局限性，目前tessera的remember机制还不能很好地支持在声明宏内部被使用的情况。因为宏在此时还没有被展开，tessera过程宏无法得知宏内部的控制流结构，因此无法为remember调用生成正确的标识符。目前只能避免在宏内部使用remember，或者调用组件，如果要使用，则声明宏生成的代码不能有影响remember的控制流。这需要未来rust支持以某种方式影响宏展开顺序才能解决。
 
-而状态保存，即`State<T>`，则是一个可控的Arena gc实现，在每帧进行标记-清除垃圾回收，从而销毁不再使用的状态。可以参考[gc-arena](https://github.com/kyren/gc-arena)。
+而状态保存，即`State<T>`，则是一个可控的Arena gc实现。它的核心思想可以参考[gc-arena](https://github.com/kyren/gc-arena)。tessera使用的则是一个特化的精简实现，每帧根据remember的调用情况标记存活状态，未被标记的状态则在帧结束时被清除。
