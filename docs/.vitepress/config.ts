@@ -102,6 +102,7 @@ const vitePressI18nConfig: VitePressI18nOptions = {
       nav: [
         { text: "主页", link: "/zhHans" },
         { text: "手册", link: "/zhHans/guide/getting-started" },
+        { text: "博客", link: "/zhHans/blog/" },
         { text: "关于", link: "/zhHans/about" },
       ],
     },
@@ -109,6 +110,7 @@ const vitePressI18nConfig: VitePressI18nOptions = {
       nav: [
         { text: "Home", link: "/" },
         { text: "Guide", link: "/guide/getting-started" },
+        { text: "Blog", link: "/blog/" },
         { text: "About", link: "/about" },
       ],
     },
