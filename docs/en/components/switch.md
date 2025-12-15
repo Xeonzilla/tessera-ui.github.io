@@ -1,4 +1,4 @@
---- 
+---
 title: Switch
 order: 4
 ---
@@ -24,4 +24,3 @@ The `switch` component displays a toggle that can switch between on and off stat
 ## Preview
 
 ![switch](/switch_example.gif)
-

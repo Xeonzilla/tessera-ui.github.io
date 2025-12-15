@@ -33,7 +33,7 @@ use tessera_ui::{Renderer, renderer::TesseraConfig};
 fn main() {
     let config = TesseraConfig {
         window_title: "Tessera".to_string(), // 设置窗口标题
-        ..Default::default()                         
+        ..Default::default()
     };
     Renderer::run_with_config(
         || {}, // UI入口函数
@@ -52,7 +52,7 @@ use tessera_ui::{Renderer, renderer::TesseraConfig};
 fn main() {
     let config = TesseraConfig {
         window_title: "Tessera".to_string(), // 设置窗口标题
-        ..Default::default()                         
+        ..Default::default()
     };
     Renderer::run_with_config(
         || {}, // UI入口函数
@@ -76,7 +76,7 @@ use tessera_ui_basic_components::surface::{SurfaceArgsBuilder, surface};
 fn main() {
     let config = TesseraConfig {
         window_title: "Tessera Example".to_string(), // 设置窗口标题
-        ..Default::default()                         
+        ..Default::default()
     };
     Renderer::run_with_config(
         || app(), // UI入口，也就是顶层的tessera

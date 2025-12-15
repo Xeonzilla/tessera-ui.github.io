@@ -14,7 +14,11 @@ Welcome to the Tessera Blog. Here we share the latest updates and stories.
   <h2>
     <a :href="post.url">{{ post.title }}</a>
   </h2>
-  <div class="post-date">{{ post.date.string }}</div>
+  <div class="post-date">
+    <span v-if="post.author">By {{ post.author }} | </span>
+    <span>{{ post.date.string }}</span>
+    <span class="meta-info"> | Words: {{ post.wordCount }} | Reading Time: {{ post.readingTime }} min</span>
+  </div>
   <div v-if="post.excerpt" v-html="post.excerpt"></div>
 </div>
 
