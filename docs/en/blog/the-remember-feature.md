@@ -93,7 +93,7 @@ fn foo(state: FooState) {
 }
 ```
 
-*There are only two hard things in Computer Science: cache invalidation and naming things.* And this is precisely a naming problem. Now we have to name the state for every stateful component, even though this state plays no part in the parent component's logic and exists solely to be passed down to the child. No one can truly figure out what it should be called, or if it has any meaning other than turning the state into a mess.
+_There are only two hard things in Computer Science: cache invalidation and naming things._ And this is precisely a naming problem. Now we have to name the state for every stateful component, even though this state plays no part in the parent component's logic and exists solely to be passed down to the child. No one can truly figure out what it should be called, or if it has any meaning other than turning the state into a mess.
 
 ### Clone Hell
 

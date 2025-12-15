@@ -28,6 +28,11 @@ import { data as posts } from './posts.data.ts'
   border-bottom: 1px solid var(--vp-c-divider);
   padding-bottom: 1rem;
 }
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
 .post-date {
   font-size: 0.9rem;
   color: var(--vp-c-text-2);

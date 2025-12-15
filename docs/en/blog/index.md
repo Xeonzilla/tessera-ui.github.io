@@ -28,6 +28,11 @@ Welcome to the Tessera Blog. Here we share the latest updates and stories.
   border-bottom: 1px solid var(--vp-c-divider);
   padding-bottom: 1rem;
 }
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
 .post-date {
   font-size: 0.9rem;
   color: var(--vp-c-text-2);
