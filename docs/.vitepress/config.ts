@@ -13,42 +13,7 @@ const vitePressConfig: UserConfig = {
     hostname: "https://tessera-ui.github.io/",
   },
 
-  head: [
-    ["link", { rel: "icon", href: "/favicon.svg" }],
-    [
-      "script",
-      {},
-      `
-    (function() {
-      const { pathname, search, hash } = window.location;
-      const base = '/';
-
-      const prefixes = ['/tessera-official-website', '/tessera-offcial-website'];
-      for (const prefix of prefixes) {
-        if (pathname.startsWith(prefix)) {
-          const newPath = pathname.slice(prefix.length) || '/';
-          window.location.replace(newPath + search + hash);
-          return;
-        }
-      }
-
-      if (pathname === base || pathname === (base + 'index.html')) {
-        const userLang = navigator.language;
-        if (userLang.toLowerCase().startsWith('zh')) {
-          window.location.replace(base + 'zhHans/' + search + hash);
-        }
-      }
-
-      if (pathname.startsWith(base + 'zh/')) {
-        // redirect /zh/ to /zhHans/
-        const newPath = pathname.replace(base + 'zh/', base + 'zhHans/');
-        window.location.replace(newPath + search + hash);
-        return;
-      }
-    })();
-    `,
-    ],
-  ],
+  head: [["link", { rel: "icon", href: "/favicon.svg" }]],
 
   rewrites: {
     "en/:rest*": ":rest*",
@@ -85,7 +50,7 @@ const vitePressConfig: UserConfig = {
         content
           .replace(/[\u4e00-\u9fa5]/g, " ")
           .match(
-            /[a-zA-Z0-9_\u0392-\u03c9\u0400-\u04FF]+|[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\u30a0-\u30ff\u31f0-\u31ff\u3105-\u312d\u31a0-\u31b7\uff00-\uffef]/g,
+            /[a-zA-Z0-9_\u0392-\u03c9\u0400-\u04FF]+|[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\u30a0-\u30ff\u31f0-\u31ff\u3105-\u312d\u31a0-\u31b7\uff00-\uffef]/g
           ) || []
       ).length;
 
@@ -150,6 +115,6 @@ const vitePressI18nConfig: VitePressI18nOptions = {
 export default defineConfig(
   withSidebar(
     withI18n(vitePressConfig, vitePressI18nConfig),
-    vitePressSidebarConfigs,
-  ),
+    vitePressSidebarConfigs
+  )
 );
