@@ -213,7 +213,7 @@ fn animated_box() {
 }
 ```
 
-## Parallel Features
+## Complementary Features
 
 In addition to `remember`, Tessera v3 introduces some similar but distinct features, such as the `context` feature for the theming system. `context` is orthogonal to `remember`. `context` is used to pass data across multiple levels of the component tree but cannot persist state across frames, while `remember` persists state across frames within a component but cannot pass data across component tree levels. Combining these features will greatly optimize Tessera's state management experience and code conciseness.
 
