@@ -37,7 +37,7 @@ export default createContentLoader("en/blog/*.md", {
 
         return {
           title: frontmatter.title,
-          url,
+          url: url.slice('/en'.length), // remove /en for correct url.
           excerpt,
           date: formatDate(frontmatter.date),
           author: frontmatter.author,
