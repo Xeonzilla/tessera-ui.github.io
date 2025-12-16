@@ -1,11 +1,13 @@
 ---
-title: The New Remember Feature
+title: Positional Memoization via Proc Macros in a Rust UI Framework
 date: 2025-12-15T16:56:00+08:00
 author: shadow3
 githubName: shadow3aaa
 ---
 
-# The New Remember Feature
+# Positional Memoization via Proc Macros in a Rust UI Framework
+
+Before diving in, I want to introduce what Tessera is. Tessera is a declarative, immediate-mode UI framework for Rust that emphasizes a friendly development experience through functional components while striving for extensibility and high performance.
 
 One of the key goals for Tessera v3 is to introduce the `remember` mechanism. This will allow Tessera to truly support stateful components, avoiding the unconditional state hoisting issues common in traditional immediate-mode UIs. The feature is now complete, and the API design has been finalized. My primary focus has shifted to porting the complete MD3 component library, which will take some time. Therefore, now is a good time (while the details are still fresh in my mind) to explain the changes `remember` will bring to Tessera.
 

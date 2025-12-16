@@ -1,11 +1,13 @@
 ---
-title: 新的 remember 特性
+title: 使用过程宏实现Rust UI框架中的位置化记忆
 date: 2025-12-15T16:56:00+08:00
 author: shadow3
 githubName: shadow3aaa
 ---
 
-# 新的 remember 特性
+# 使用过程宏实现Rust UI框架中的位置化记忆
+
+在开始之前我想先介绍一下tessera是什么。tessera 是一个面向 Rust 的声明式、立即模式 UI 框架，强调通过函数式组件实现友好的开发体验，并尽可能的实现可拓展性和高性能。
 
 tessera v3的其中一个重要目标是引入remember机制，让tessera真正拥有带状态组件，避免传统即时模式ui的无条件状态提升问题。此功能已经完成并确定了api设计，现在我主要的工作内容转向了移植完整的md3组件库，这会花费不少时间，因此现在是一个恰当的时机（趁我印象深刻时）说明一下remember将为tessera带来的改变。
 
